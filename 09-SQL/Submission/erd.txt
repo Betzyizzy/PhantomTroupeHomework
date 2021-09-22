@@ -1,0 +1,42 @@
+department
+-
+dept_no VARCHAR PK
+dept_name VARCHAR
+last_updated datetime
+
+dept_emp
+-
+id serial PK
+emp_no int FK >- employees.emp_no
+dept_no varchar FK >- department.dept_no
+last_updated datetime
+
+dept_manager
+-
+id serial PK
+emp_no INT FK >- employees.emp_no
+last_updated datetime
+
+employees
+-
+emp_no int PK
+emp_title varchar(10) FK >- titles.title_id
+birth_date datetime
+first_name VARCHAR
+last_name VARCHAR
+gender VARCHAR
+hire_date DATE
+last_updated datetime
+
+salaries
+-
+id serial PK
+emp_no INT FK >- employees.emp_no
+salary INT
+last_updated datetime
+
+titles
+-
+title_id varchar PK
+title varchar(55)
+last_updated datetime
